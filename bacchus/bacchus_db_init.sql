@@ -1,6 +1,6 @@
 /*
     Title: bacchus_db_init.sql
-    Author: Brandon Hackett, Darnell Lewis, Derek L
+    Author: Brandon Hackett, Darnell Lewis, Derek Livermont, Lindsey Yin
     Date: 12/2/23
     Description: bacchus database initialization script.
 */
@@ -34,7 +34,7 @@ CREATE TABLE employee (
     emp_first   VARCHAR(50)     NOT NULL,
     emp_last   VARCHAR(50)     NOT NULL,
     emp_position   VARCHAR(50)     NOT NULL,
-    emp_rate DECIMAL NOT NULL,
+    emp_rate DECIMAL(6,2) NOT NULL,
     emp_hire_date   DATE           NOT NULL,
 
     PRIMARY KEY(emp_id)
