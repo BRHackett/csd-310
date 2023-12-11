@@ -91,7 +91,8 @@ cursor.execute("SELECT supply_order_id, supplier_name,order_date,expected_delive
 supplyorders = cursor.fetchall()
 print("--DISPLAYING Supply Order RECORDS --")
 for supplyorder in supplyorders:
-    print("Supply Order ID: {}\nSupplier Name: {}\nOrder Date: {}\nExpected Delivery: {}\nActual Delivery: {}\n".format(supplyorder[0],supplyorder[1],supplyorder[2],supplyorder[3],supplyorder[4]))
+ 
+    print("Supply Order ID: {}\nSupplier Name: {}\nOrder Date: {}\nExpected Delivery: {}\nActual Delivery: {}\n".format(supplyorder[0],supplyorder[1],supplyorder[2],supplyorder[3], supplyorder[4]))
 
 cursor.execute("SELECT supply_order_line_id,supplier_name,component_name,component_quantity,component_price "
                 "FROM supply_order INNER JOIN supplier on supplier.supplier_id=supply_order.supplier_id "
